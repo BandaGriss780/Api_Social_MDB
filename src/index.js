@@ -2,11 +2,13 @@ import express from 'express'
 import morgan from 'morgan'
 import mongoose from "mongoose"
 import v1UsersRoute from './v1/routes/users.js'
+import dotenv from "dotenv"
 const app = express()
 
-const url = "mongodb://localhost/api_social"
+dotenv.config()
+//const url = "mongodb://localhost/api_social"
 
-mongoose.connect(url, {
+mongoose.connect(process.env.MONGOID, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

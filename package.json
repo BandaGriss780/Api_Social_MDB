@@ -1,15 +1,16 @@
 {
- "type":"module",
-  "dependencies": {
-    "express": "^4.18.1",
-    "mongoose": "^6.5.2",
-    "morgan": "^1.10.0",
-    "node": "^16.17.0"
-  },
-  "scripts": {
-    "dev": "nodemon src/index"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.19"
-  }
+ "type": "module",
+ "dependencies": {
+  "dotenv": "^16.0.1",
+  "express": "^4.18.1",
+  "mongoose": "^6.5.2",
+  "morgan": "^1.10.0"
+ },
+ "scripts": {
+  "dev": "nodemon src/index.js",
+  "start": "node src/index.js"
+ },
+ "devDependencies": {
+  "nodemon": "^2.0.19"
+ }
 }
