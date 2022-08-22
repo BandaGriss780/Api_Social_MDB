@@ -28,7 +28,7 @@ const PORT = process.env.PORT || 3000
 app.use('/api/v1/users', v1UsersRoute)
 //app.use('/api/v1/posts', v1PostsRoute)
 
-app.listen(process.env.PORT, () => {
+app.listen(PORT, () => {
     console.log("todo bien")
 })
 
