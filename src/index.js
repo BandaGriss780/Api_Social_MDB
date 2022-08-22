@@ -22,7 +22,7 @@ app.use(morgan('dev'))
 //Variables 
 //const v1UsersRoute = require('./v1/routes/users')
 //const v1PostsRoute = require('./v1/routes/post')
-
+const PORT = process.env.PORT || 3000
 
 //ROUTER
 app.use('/api/v1/users', v1UsersRoute)
