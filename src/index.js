@@ -28,7 +28,7 @@ app.use(morgan('dev'))
 app.use('/api/v1/users', v1UsersRoute)
 //app.use('/api/v1/posts', v1PostsRoute)
 
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log("todo bien")
 })
 
