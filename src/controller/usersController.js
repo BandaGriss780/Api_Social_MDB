@@ -7,7 +7,7 @@ const getAllUsers = async (req, res) => {
 
 const getOneUser = async (req, res) => {
     const { id } = req.params
-    const oneUser = await userServices.getOneUser(Number(id))
+    const oneUser = await userServices.getOneUser(id)
     res.status(200).json({status: "ok", data: oneUser})
 }
 
@@ -25,7 +25,7 @@ const createNewUser = async (req,res) => {
         age,
         band
     }
- console.log(newUsuario)
+ //console.log(newUsuario)
     const createdUser = await userServices.createNewUser(newUsuario)
     res.status(201).json({msg: "Usuario creado correctamente!!", data: createdUser})
 }
@@ -33,15 +33,15 @@ const createNewUser = async (req,res) => {
 const updateUser = async (req, res) => {
     const { id } = req.params
     const data = req.body
-    console.log(data)
-    await userServices.updateUser(Number(id), data)
+    //console.log(data)
+    await userServices.updateUser(id, data)
 
     res.status(200).json({msg: "Usuario Actualizado!!"})
 }
 
 const deleteUser = async (req, res) => {
     const { id } = req.params
-    await userServices.deleteUser(Number(id))
+    await userServices.deleteUser(id)
 
     res.json({msg: "Usuario eliminado!"})
 }

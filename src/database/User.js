@@ -1,13 +1,4 @@
-import mongoose from "mongoose"
-
-const usuarioSchema = mongoose.Schema({
-    name: String,
-    age: Number,
-    band: String
-}, {versionKey: false})
-
-
-const UsuariosModel = mongoose.model("usuarios", usuarioSchema)
+import {UsuariosModel} from "../models/Model.js"
 
 
 async function getAllUsers() {

@@ -2,13 +2,14 @@ import express from 'express'
 import morgan from 'morgan'
 import mongoose from "mongoose"
 import v1UsersRoute from './v1/routes/users.js'
+import v1PostsRoute from './v1/routes/post.js'
 import dotenv from "dotenv"
 const app = express()
 
 dotenv.config()
-//const url = "mongodb://localhost/api_social"
+const url = "mongodb://localhost/api_social"
 
-mongoose.connect(process.env.MONGOID, {
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
@@ -26,10 +27,10 @@ const PORT = process.env.PORT || 3000
 
 //ROUTER
 app.use('/api/v1/users', v1UsersRoute)
-//app.use('/api/v1/posts', v1PostsRoute)
+app.use('/api/v1/posts', v1PostsRoute)
 
 app.listen(PORT, () => {
     console.log("todo bien")
 })
 
-
+//process.env.MONGOID
