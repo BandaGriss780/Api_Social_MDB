@@ -10,7 +10,8 @@ export const postSchema = mongoose.Schema({
     title: String,
     content: String,
     createdAt: String,
-    published: Boolean
+    published: Boolean,
+    category: String
 }, {versionKey: false})
 
 export const categorySchema = mongoose.Schema({
