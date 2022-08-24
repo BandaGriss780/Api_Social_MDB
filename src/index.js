@@ -7,9 +7,9 @@ import dotenv from "dotenv"
 const app = express()
 
 dotenv.config()
-//const url = "mongodb://localhost/api_social"
+const url = "mongodb://localhost/api_social"
 
-mongoose.connect(process.env.MONGOID, {
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })

@@ -14,7 +14,7 @@ const getOnePost = async (req, res) => {
 const createNewPost = async (req,res) => {
     const { title, content, published, category} = req.body
 
-        if(!title || !content || !published || !category) { {
+        if(!title || !content || !published || !category) {
         res.status(400).json({
             status: "error",
             err: "Completa todos los campos",
@@ -28,11 +28,11 @@ const createNewPost = async (req,res) => {
         createdAt: new Date(),
         category
     }
- //console.log(newUsuario)
+ console.log(newPosteo)
     const createdPost = await PostServices.createNewPost(newPosteo)
     res.status(201).json({msg: "Usuario creado correctamente!!", data: createdPost})
 }
-}
+
 const updatePost = async (req, res) => {
     const { id } = req.params
     const data = req.body
