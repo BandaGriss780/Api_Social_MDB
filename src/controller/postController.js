@@ -32,7 +32,7 @@ const createNewPost = async (req,res) => {
     const createdPost = await PostServices.createNewPost(newPosteo)
     res.status(201).json({msg: "Usuario creado correctamente!!", data: createdPost})
 }
-
+}
 const updatePost = async (req, res) => {
     const { id } = req.params
     const data = req.body
